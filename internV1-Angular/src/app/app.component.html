@@ -1,0 +1,13 @@
+<div 
+  class="status" 
+  [class.offline]="status === onlineStatusCheck.OFFLINE">
+  <span style="color:#9eeb9e" *ngIf="status === onlineStatusCheck.OFFLINE"> Offline</span>
+  <span style="color:#e5c7b4" *ngIf="status != onlineStatusCheck.OFFLINE"> Online</span>
+</div>
+
+<div class="main-content">
+  <!-- Top navbar -->
+  <app-navbar></app-navbar>
+  <!-- Pages -->
+  <router-outlet></router-outlet>
+</div>
